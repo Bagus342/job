@@ -1,0 +1,40 @@
+.pictProf {
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  
+  .pictProf img {
+    width: 100%;
+    height: auto;
+  }
+
+  .data {
+    display: flex;
+    border-bottom: 1px solid rgb(221, 221, 221);
+  }
+
+  .data .value {
+    margin-left: 2em;
+  }
+
+  .data .head {
+    font-weight: bold;
+    width: 10em;
+  }
+
+  .data p {
+    margin-top: .7em;
+  }
+
+  .data a {
+    margin-top: .7em;
+  }
+
+  .data textarea {
+    overflow-y: scroll;
+        height: 100px;
+        resize: none; 
+  }

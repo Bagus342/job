@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+* {
+	font-family: Poppins;
+}
+
+.navbar .navbar-brand {
+	color: #000;
+	font-size: 25px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
+.navbar-nav a {
+    color: #000;
+	font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.judul h1 {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.konten {
+    margin-top: 30px;
+}
+
+form {
+	padding-bottom: 30px;
+}
+
+.biodata {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.info1 {
+    padding: 10px 0 10px 10px;
+    width: 10em;
+    font-weight: bold;
+}
+
+#textarea {
+    height: 15em;
+    background-color: rgb(201, 201, 201);
+}
+
+.save {
+	text-align: right;
+    margin-top: 30px;
+}

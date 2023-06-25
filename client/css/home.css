@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+* {
+	font-family: Poppins;
+}
+
+.navbar .navbar-brand {
+	color: #000;
+	font-size: 25px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
+.navbar-nav a {
+    color: #000;
+	font-size: 15px;
+    letter-spacing: 1px;
+}
