@@ -22,10 +22,10 @@ function login($email, $password)
                 header('Location: ../admin/index.php');
             } else if ($row["role"] == 'pelamar') {
                 $_SESSION["user"] = $row;
-                header('Location: ProfilUser.php');
+                header('Location: home.php');
             } else {
                 $_SESSION["user"] = $row;
-                header('Location: ProfilPerusahaan.php');
+                header('Location: home.php');
             }
         } else {
             echo "<script> alert('Password salah !'); document.location.href = 'login.php'; </script>";

@@ -11,7 +11,7 @@ if (isset($_GET['logout'])) {
 }
 
 if (isset($_POST['apply'])) {
-    apply($_POST['id']);
+    apply($_POST['id'], $_GET['id']);
 }
 ?>
 <!DOCTYPE html>
@@ -115,7 +115,7 @@ if (isset($_POST['apply'])) {
             </div>
             <div class="biodata">
                 <div class="info1"><label>Deskripsi</label></div>
-                <textarea class="form-control" id="textarea" disabled><?php print $lamaran['deskripsi'] ?></textarea>
+                <textarea class="form-control" id="textarea" style="background-color: white; border: none; resize: none;" disabled><?php print $lamaran['deskripsi'] ?></textarea>
             </div>
             <div class="pelamar" style="border: 1px solid rgb(201, 201, 201); padding: 1.5em; border-radius: 10px;">
                 <div class="judul">
@@ -128,7 +128,7 @@ if (isset($_POST['apply'])) {
                         $value['tgl'] === '0000-00-00' ? $tgl = '' : $tgl = $split[2] . "/" . $split[1] . "/" . $split[0];
                         ?>
                         <div style="display: flex; justify-content: space-between; height: 4em; border-top: 1px solid rgb(211, 211, 211);">
-                            <p style="margin: 1.2em 0 0 1em; font-weight: bold;"><?= $value['nama'] ?></p>
+                            <p style="margin: 1.2em 0 0 1em; font-weight: bold;"><?= $value['nama'] ?> | <?= $value['status'] == false ? 'Belum Apply' : 'Sudah Apply' ?></p>
                             <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#detail<?= $value['user'] ?>" style="height: 2.4em; margin: .9em 1em 0 0;">Detail</button>
                         </div>
 
@@ -203,9 +203,9 @@ if (isset($_POST['apply'])) {
                                     </div>
                                     <div class=" modal-footer">
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                        <form action="" method="post">
+                                        <form method="post" style="padding: 0;">
                                             <input type="text" name="id" hidden value="<?= $value['id'] ?>">
-                                            <button type="button" name="apply" <?= $value['status'] == false ? '' : print 'disabled' ?> class="btn btn-primary" data-bs-dismiss="modal">Apply</button>
+                                            <button type="submit" name="apply" <?= $value['status'] == false ? '' : print 'disabled' ?> class="btn btn-primary" data-bs-dismiss="modal">Apply</button>
                                         </form>
                                     </div>
                                 </div>

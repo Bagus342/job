@@ -57,7 +57,7 @@ if (isset($_GET['logout'])) {
 
         <div class="konten">
             <div class="profil border">
-                <img <?php $data['profile'] == '' ? print 'src="img/img/default/profile.png"' : print 'src="img/img/' . $data['profile'] . '"' ?>>
+                <img <?php $data['profile'] == '' ? print 'src="img/img/default/Avatar.png"' : print 'src="img/img/' . $data['profile'] . '"' ?>>
                 <p><?php echo $data['nama'] ?></p>
                 <div class="edit">
                     <a href="EditProfilPerusahaan.php">Edit Profil</a>

@@ -4,7 +4,7 @@ function read()
 {
     global $conn;
     $user = $_SESSION['user']['id'];
-    $query = "SELECT P.*, U.email FROM pelamar P INNER JOIN user U ON U.id = '$user'";
+    $query = "SELECT P.*, U.email FROM pelamar P INNER JOIN user U ON P.user = U.id WHERE P.user = $user";
     $result = mysqli_query($conn, $query);
     return mysqli_fetch_assoc($result);
 }

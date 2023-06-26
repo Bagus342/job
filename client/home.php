@@ -95,6 +95,12 @@ if (isset($_POST['lamar'])) {
         .items p {
             margin-left: .5em;
         }
+
+        textarea {
+            height: 20em;
+            resize: none;
+            border: none;
+        }
     </style>
     <title>Job Street</title>
 </head>
@@ -140,7 +146,7 @@ if (isset($_POST['lamar'])) {
                     <a href="home.php?detail=<?= $value['id'] ?>" style="text-decoration: none;">
                         <div class="items">
                             <div class="profil">
-                                <img <?php $value['profile'] === '' ? print 'src="img/img/default/profile.png"' : print 'src="img/img/' . $value['profile'] . '"'  ?> alt="">
+                                <img <?php $value['profile'] === '' ? print 'src="img/img/default/Avatar.png"' : print 'src="img/img/' . $value['profile'] . '"'  ?> alt="">
                             </div>
                             <div class="text">
                                 <p style="font-size: 1.3em; margin: .5em 0 0 0; color: black;"><?= $value['pekerjaan'] ?></p>
@@ -162,13 +168,13 @@ if (isset($_POST['lamar'])) {
                             <a href="home.php" style="text-decoration: none; color: black; margin: .5em 0 0 0;">Tutup</a>
                         </div>
                         <div class="detail" style="text-align: left; padding: 2em;">
-                            <img <?php $detail['profile'] === '' ? print 'src="img/img/default/profile.png"' : print 'src="img/img/' . $detail['profile'] . '"'  ?> style="width: 100px; height: 100px; border-radius: 50%;">
-                            <p style="font-size: 1.1em; margin: .8em 0 0 0;"><?php print $detail['pekerjaan'] ?></p>
-                            <p style="font-size: 1.1em; margin: 0 0 0 0;"><?php print $detail['nama'] ?></p>
-                            <p style="font-size: 1.1em; margin: 0 0 0 0;"><?php print $detail['alamat'] ?></p>
-                            <p style="font-size: 1.1em; margin: 0 0 0 0;"><?php print $detail['no'] ?></p>
-                            <p style="font-size: 1.1em; margin: 2em 0 1em 0;">Deskripsi Pekerjaan</p>
-                            <p><?php print $detail['deskripsi'] ?></p>
+                            <img <?php $detail['profile'] === '' ? print 'src="img/img/default/Avatar.png"' : print 'src="img/img/' . $detail['profile'] . '"'  ?> style="width: 100px; height: 100px; border-radius: 50%;">
+                            <p style="font-size: 1.3em; margin: .8em 0 0 0; font-weight: bold;"><?php print $detail['pekerjaan'] ?></p>
+                            <p style="font-size: 1em; margin: 0 0 0 0;"><?php print $detail['nama'] ?></p>
+                            <p style="font-size: 1em; margin: 0 0 0 0;"><?php print $detail['alamat'] ?></p>
+                            <p style="font-size: 1em; margin: 0 0 0 0;"><?php print $detail['no'] ?></p>
+                            <p style="font-size: 1em; margin: 2em 0 1em 0;">Deskripsi Pekerjaan</p>
+                            <textarea class="form-control" disabled style="background-color: white; border: none;"><?php print $detail['deskripsi'] ?></textarea>
                         </div>
                     </div>
                 <?php else : ?>
@@ -190,7 +196,7 @@ if (isset($_POST['lamar'])) {
                 $('.column2').css('top', '4.5em')
                 $('.column2').css('height', '33.22em')
             } else {
-                $('.content').css('padding', '4em')
+                $('.column2').css('top', '8.468em')
             }
         })
 

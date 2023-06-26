@@ -20,9 +20,10 @@ function getPengajuan()
     return $rows;
 }
 
-function apply($id) {
+function apply($id, $detail)
+{
     global $conn;
-    $query = "UPDATE INTO pengajuan SET status = '1' WHERE id = '$id'";
+    $query = "UPDATE pengajuan SET status = true WHERE id = '$id'";
     mysqli_query($conn, $query);
-    header('Location: DetailLamaran.php');
+    header("Location: DetailLamaran.php?id=$detail");
 }

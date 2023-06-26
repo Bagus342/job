@@ -64,7 +64,7 @@ if (isset($_POST["submit"])) {
         <div class="konten">
             <div class="profil">
                 <form action="" method="post" enctype="multipart/form-data">
-                    <img id="profile" style="cursor: pointer;" <?php getData($_SESSION['user']['id'])['profile'] === '' ? print 'src="img/img/default/profile.png"' : print 'src="img/img/' . getData($_SESSION['user']['id'])['profile'] . '"'  ?>>
+                    <img id="profile" style="cursor: pointer;" <?php getData($_SESSION['user']['id'])['profile'] === '' ? print 'src="img/img/default/Avatar.png"' : print 'src="img/img/' . getData($_SESSION['user']['id'])['profile'] . '"'  ?>>
                     <input style="display: none;" type="file" name="profile" id="upload">
             </div>
             <div class="biodata-user ">
